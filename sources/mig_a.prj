@@ -23,40 +23,32 @@
 
   <Version>4.2</Version>
 
-  <SystemClock>Differential</SystemClock>
+  <SystemClock>No Buffer</SystemClock>
 
-  <ReferenceClock>Differential</ReferenceClock>
+  <ReferenceClock>No Buffer</ReferenceClock>
 
   <SysResetPolarity>ACTIVE LOW</SysResetPolarity>
 
-  <BankSelectionFlag>TRUE</BankSelectionFlag>
+  <BankSelectionFlag>FALSE</BankSelectionFlag>
 
-  <InternalVref>0</InternalVref>
+  <InternalVref>1</InternalVref>
 
   <dci_hr_inouts_inputs>50 Ohms</dci_hr_inouts_inputs>
 
   <dci_cascade>0</dci_cascade>
 
   <FPGADevice>
-    <selected>7a/xc7a35t-ftg256</selected>
-    <selected>7a/xc7a75t-ftg256</selected>
-    <selected>7a/xc7a100t-ftg256</selected>
-    <selected>7a/xc7a15t-ftg256</selected>
-    <selected>7a/xc7a15ti-ftg256</selected>
-    <selected>7a/xc7a35ti-ftg256</selected>
     <selected>7a/xc7a50ti-ftg256</selected>
-    <selected>7a/xc7a75ti-ftg256</selected>
-    <selected>7a/xc7a100ti-ftg256</selected>
   </FPGADevice>
 
   <Controller number="0">
-    <MemoryDevice>DDR3_SDRAM/Components/MT41J128M8XX-125</MemoryDevice>
-    <TimePeriod>3225</TimePeriod>
+    <MemoryDevice>DDR2_SDRAM/Components/MT47H64M16XX-25</MemoryDevice>
+    <TimePeriod>3906</TimePeriod>
     <VccAuxIO>1.8V</VccAuxIO>
-    <PHYRatio>2:1</PHYRatio>
-    <InputClkFreq>310.077</InputClkFreq>
+    <PHYRatio>4:1</PHYRatio>
+    <InputClkFreq>64.004</InputClkFreq>
     <UIExtraClocks>0</UIExtraClocks>
-    <MMCM_VCO>620</MMCM_VCO>
+    <MMCM_VCO>1200</MMCM_VCO>
     <MMCMClkOut0> 1.000</MMCMClkOut0>
     <MMCMClkOut1>1</MMCMClkOut1>
     <MMCMClkOut2>1</MMCMClkOut2>
@@ -70,54 +62,87 @@
     <BankMachineCnt>4</BankMachineCnt>
     <CustomPart>FALSE</CustomPart>
     <NewPartName/>
-    <RowAddress>14</RowAddress>
+    <RowAddress>13</RowAddress>
     <ColAddress>10</ColAddress>
     <BankAddress>3</BankAddress>
-    <MemoryVoltage>1.5V</MemoryVoltage>
-    <C0_MEM_SIZE>134217728</C0_MEM_SIZE>
+    <C0_MEM_SIZE>67108864</C0_MEM_SIZE>
     <UserMemoryAddressMap>BANK_ROW_COLUMN</UserMemoryAddressMap>
-    <BankSelection>
-      <Bank T0="DQ[0-7]" T1="Address/Ctrl-0" T2="Address/Ctrl-1" T3="Address/Ctrl-2" name="15"/>
-    </BankSelection>
-    <Reference_Clock>
-      <Pin Bank="35" PADName="D4/C4(CC_P/N)" name="clk_ref_p/n"/>
-    </Reference_Clock>
-    <System_Clock>
-      <Pin Bank="14" PADName="N11/N12(CC_P/N)" name="sys_clk_p/n"/>
-    </System_Clock>
+    <PinSelection>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="G14" SLEW="" VCCAUX_IO="" name="ddr2_addr[0]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="F12" SLEW="" VCCAUX_IO="" name="ddr2_addr[10]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="H16" SLEW="" VCCAUX_IO="" name="ddr2_addr[11]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="H11" SLEW="" VCCAUX_IO="" name="ddr2_addr[12]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="E12" SLEW="" VCCAUX_IO="" name="ddr2_addr[1]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="F15" SLEW="" VCCAUX_IO="" name="ddr2_addr[2]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="G12" SLEW="" VCCAUX_IO="" name="ddr2_addr[3]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="G16" SLEW="" VCCAUX_IO="" name="ddr2_addr[4]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="H13" SLEW="" VCCAUX_IO="" name="ddr2_addr[5]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="G15" SLEW="" VCCAUX_IO="" name="ddr2_addr[6]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="H12" SLEW="" VCCAUX_IO="" name="ddr2_addr[7]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="J16" SLEW="" VCCAUX_IO="" name="ddr2_addr[8]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="H14" SLEW="" VCCAUX_IO="" name="ddr2_addr[9]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="E15" SLEW="" VCCAUX_IO="" name="ddr2_ba[0]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="E11" SLEW="" VCCAUX_IO="" name="ddr2_ba[1]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="D11" SLEW="" VCCAUX_IO="" name="ddr2_ba[2]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="F13" SLEW="" VCCAUX_IO="" name="ddr2_cas_n"/>
+      <Pin IN_TERM="" IOSTANDARD="DIFF_SSTL18_II" PADName="D15" SLEW="" VCCAUX_IO="" name="ddr2_ck_n[0]"/>
+      <Pin IN_TERM="" IOSTANDARD="DIFF_SSTL18_II" PADName="D14" SLEW="" VCCAUX_IO="" name="ddr2_ck_p[0]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="E13" SLEW="" VCCAUX_IO="" name="ddr2_cke[0]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="A14" SLEW="" VCCAUX_IO="" name="ddr2_dm[0]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="B14" SLEW="" VCCAUX_IO="" name="ddr2_dq[0]"/>
+      <Pin IN_TERM="" IOSTANDARD="" PADName="B12" SLEW="" VCCAUX_IO="" name="ddr2_dq[10]"/>
+      <Pin IN_TERM="" IOSTANDARD="" PADName="C8" SLEW="" VCCAUX_IO="" name="ddr2_dq[11]"/>
+      <Pin IN_TERM="" IOSTANDARD="" PADName="D8" SLEW="" VCCAUX_IO="" name="ddr2_dq[12]"/>
+      <Pin IN_TERM="" IOSTANDARD="" PADName="B11" SLEW="" VCCAUX_IO="" name="ddr2_dq[13]"/>
+      <Pin IN_TERM="" IOSTANDARD="" PADName="C9" SLEW="" VCCAUX_IO="" name="ddr2_dq[14]"/>
+      <Pin IN_TERM="" IOSTANDARD="" PADName="A12" SLEW="" VCCAUX_IO="" name="ddr2_dq[15]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="C14" SLEW="" VCCAUX_IO="" name="ddr2_dq[1]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="D13" SLEW="" VCCAUX_IO="" name="ddr2_dq[2]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="C12" SLEW="" VCCAUX_IO="" name="ddr2_dq[3]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="C11" SLEW="" VCCAUX_IO="" name="ddr2_dq[4]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="C16" SLEW="" VCCAUX_IO="" name="ddr2_dq[5]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="A13" SLEW="" VCCAUX_IO="" name="ddr2_dq[6]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="B16" SLEW="" VCCAUX_IO="" name="ddr2_dq[7]"/>
+      <Pin IN_TERM="" IOSTANDARD="" PADName="A9" SLEW="" VCCAUX_IO="" name="ddr2_dq[8]"/>
+      <Pin IN_TERM="" IOSTANDARD="" PADName="A8" SLEW="" VCCAUX_IO="" name="ddr2_dq[9]"/>
+      <Pin IN_TERM="" IOSTANDARD="DIFF_SSTL18_II" PADName="A15" SLEW="" VCCAUX_IO="" name="ddr2_dqs_n[0]"/>
+      <Pin IN_TERM="" IOSTANDARD="" PADName="A10" SLEW="" VCCAUX_IO="" name="ddr2_dqs_n[1]"/>
+      <Pin IN_TERM="" IOSTANDARD="DIFF_SSTL18_II" PADName="B15" SLEW="" VCCAUX_IO="" name="ddr2_dqs_p[0]"/>
+      <Pin IN_TERM="" IOSTANDARD="" PADName="B9" SLEW="" VCCAUX_IO="" name="ddr2_dqs_p[1]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="D16" SLEW="" VCCAUX_IO="" name="ddr2_odt[0]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="F14" SLEW="" VCCAUX_IO="" name="ddr2_ras_n"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="E16" SLEW="" VCCAUX_IO="" name="ddr2_we_n"/>
+    </PinSelection>
     <System_Control>
       <Pin Bank="Select Bank" PADName="No connect" name="sys_rst"/>
       <Pin Bank="Select Bank" PADName="No connect" name="init_calib_complete"/>
       <Pin Bank="Select Bank" PADName="No connect" name="tg_compare_error"/>
     </System_Control>
     <TimingParameters>
-      <Parameters tcke="5" tfaw="30" tras="35" trcd="13.75" trefi="7.8" trfc="110" trp="13.75" trrd="6" trtp="7.5" twtr="7.5"/>
+      <Parameters tfaw="45" tras="40" trcd="15" trefi="7.8" trfc="127.5" trp="15" trrd="10" trtp="7.5" twtr="7.5"/>
     </TimingParameters>
-    <mrBurstLength name="Burst Length">8 - Fixed</mrBurstLength>
-    <mrBurstType name="Read Burst Type and Length">Sequential</mrBurstType>
-    <mrCasLatency name="CAS Latency">5</mrCasLatency>
+    <mrBurstLength name="Burst Length">8</mrBurstLength>
+    <mrBurstType name="Burst Type">Sequential</mrBurstType>
+    <mrCasLatency name="CAS Latency">4</mrCasLatency>
     <mrMode name="Mode">Normal</mrMode>
     <mrDllReset name="DLL Reset">No</mrDllReset>
-    <mrPdMode name="DLL control for precharge PD">Slow Exit</mrPdMode>
-    <emrDllEnable name="DLL Enable">Enable</emrDllEnable>
-    <emrOutputDriveStrength name="Output Driver Impedance Control">RZQ/7</emrOutputDriveStrength>
-    <emrMirrorSelection name="Address Mirroring">Disable</emrMirrorSelection>
-    <emrCSSelection name="Controller Chip Select Pin">Enable</emrCSSelection>
-    <emrRTT name="RTT (nominal) - On Die Termination (ODT)">RZQ/4</emrRTT>
+    <mrPdMode name="PD Mode">Fast exit</mrPdMode>
+    <mrWriteRecovery name="Write Recovery">4</mrWriteRecovery>
+    <emrDllEnable name="DLL Enable">Enable-Normal</emrDllEnable>
+    <emrOutputDriveStrength name="Output Drive Strength">Fullstrength</emrOutputDriveStrength>
+    <emrCSSelection name="Controller Chip Select Pin">Disable</emrCSSelection>
+    <emrCKSelection name="Memory Clock Selection">1</emrCKSelection>
+    <emrRTT name="RTT (nominal) - ODT">50ohms</emrRTT>
     <emrPosted name="Additive Latency (AL)">0</emrPosted>
-    <emrOCD name="Write Leveling Enable">Disabled</emrOCD>
-    <emrDQS name="TDQS enable">Enabled</emrDQS>
-    <emrRDQS name="Qoff">Output Buffer Enabled</emrRDQS>
-    <mr2PartialArraySelfRefresh name="Partial-Array Self Refresh">Full Array</mr2PartialArraySelfRefresh>
-    <mr2CasWriteLatency name="CAS write latency">5</mr2CasWriteLatency>
-    <mr2AutoSelfRefresh name="Auto Self Refresh">Enabled</mr2AutoSelfRefresh>
-    <mr2SelfRefreshTempRange name="High Temparature Self Refresh Rate">Normal</mr2SelfRefreshTempRange>
-    <mr2RTTWR name="RTT_WR - Dynamic On Die Termination (ODT)">Dynamic ODT off</mr2RTTWR>
+    <emrOCD name="OCD Operation">OCD Exit</emrOCD>
+    <emrDQS name="DQS# Enable">Enable</emrDQS>
+    <emrRDQS name="RDQS Enable">Disable</emrRDQS>
+    <emrOutputs name="Outputs">Enable</emrOutputs>
     <PortInterface>AXI</PortInterface>
     <AXIParameters>
       <C0_C_RD_WR_ARB_ALGORITHM>RD_PRI_REG</C0_C_RD_WR_ARB_ALGORITHM>
-      <C0_S_AXI_ADDR_WIDTH>27</C0_S_AXI_ADDR_WIDTH>
-      <C0_S_AXI_DATA_WIDTH>32</C0_S_AXI_DATA_WIDTH>
+      <C0_S_AXI_ADDR_WIDTH>26</C0_S_AXI_ADDR_WIDTH>
+      <C0_S_AXI_DATA_WIDTH>64</C0_S_AXI_DATA_WIDTH>
       <C0_S_AXI_ID_WIDTH>4</C0_S_AXI_ID_WIDTH>
       <C0_S_AXI_SUPPORTS_NARROW_BURST>0</C0_S_AXI_SUPPORTS_NARROW_BURST>
     </AXIParameters>
